@@ -1,6 +1,56 @@
+import java.util.Scanner;
+
 public class Temps{
-   public static void main(String[] args){
-      System.out.println("Kelvin to Fahrenheit: " + cToF(15));
+   public static void main(String[] args){ 
+      Scanner sc = new Scanner(System.in);
+      int choice;
+      double inputTemp, result = 0.0;
+      
+      do {
+         System.out.println("\n\nTemperature Conversion Menue\n");
+         System.out.println("1. Fahrenheit to Celsius");
+         System.out.println("2. Fahrenheit to Kelvin");
+         System.out.println("3. Celsius to Fahrenheit");
+         System.out.println("4. Celsius to Kelvin");
+         System.out.println("5. Kelvin to Fahrenheit");
+         System.out.println("6. Kelvin to Celsius");
+         System.out.println("0. EXIT\n");
+         System.out.println("Enter your Choice: ");
+         
+         // Get user Choice
+         while (!sc.hasNextInt()) {
+            sc.next();
+            System.out.print("Enter your Choice: ");
+          } 
+          choice = sc.nextInt();
+          
+          if (choice >= 1 && choice <= 6) {
+            System.out.print("Enter the input temperature: ");
+            inputTemp = sc.nextDouble();
+            
+            if (choice == 1) {
+               result = fToC(inputTemp);
+            }
+            else if (choice == 2) {
+               result = fToK(inputTemp);
+            }
+            else if (choice == 3) {
+               result = cToF(inputTemp);
+            }
+            else if (choice == 4) {
+               result = cToK(inputTemp);
+            }
+            else if (choice == 5) {
+               result = kToF(inputTemp);
+            }
+            else if (choice == 6) {
+               result = kToC(inputTemp);
+            }
+            System.out.printf("Conversion Temperature is: %8.2f\n", result);
+            
+          } 
+      } while (choice !=0);
+      System.out.println("GoodBye");
    }
    /**
    * Converts Fahrenheit to Celsius
