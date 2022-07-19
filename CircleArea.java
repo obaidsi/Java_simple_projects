@@ -61,7 +61,7 @@ public class CircleArea {
 			System.out.println("Enter the radius: ");
 			double radius = sc.nextInt();
 			while(radius<=0 || radius>1000){
-				System.out.println("Radius must be greater than zero less than 1000. Please renter radius:");
+				System.out.println("Radius must be greater than zero and less than 1000. Please renter radius:");
 				radius = sc.nextInt();
 			}
         	System.out.println("Radius set to " + radius);
