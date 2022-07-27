@@ -19,4 +19,12 @@ public class Customer {
 
     public void setBalance(double balance){ this.balance = balance; }
 
+    public String toString(){
+        String custInfo = "";
+        custInfo += "Customer name      : " + name + "\n";
+        custInfo += "Customer age       : " + age  + "\n";
+        custInfo += "Customer balance   : $" + String.format("%, .2f\n", balance);
+        return custInfo;
+    }
+
 }

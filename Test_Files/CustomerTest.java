@@ -26,5 +26,19 @@ public class CustomerTest {
         assertEquals(10.2d, actualCustomer.getBalance(), 0.0);
         assertEquals("John", actualCustomer.getName());
     }
+
+    /**
+     * Methods under test:
+     *
+     * <ul>
+     *   <li>{@link Customer#Customer(String, int, double)}
+     *   <li>{@link Customer#toString()}
+     * </ul>
+     */
+    @Test
+    public void testConstructor2() {
+        assertEquals("Customer name      : Name\nCustomer age       : 1\nCustomer balance   : $ 10.00\n",
+                (new Customer("Name", 1, 10.0d)).toString());
+    }
 }
 
