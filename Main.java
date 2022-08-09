@@ -25,9 +25,11 @@ public class Main {
         // Testing Sorting Algorithms
         SortingAlgorithms st = new SortingAlgorithms();
         int[] arr = {3, 2, 5, 7, 1, 9, 8, 55, 41, 99, 4};
-        st.bubbleSort(arr);
-        System.out.println(Arrays.toString(arr));
+        int[] bubbleSorted = st.bubbleSort(arr);
+        System.out.println("Bubble Sorted: " + Arrays.toString(bubbleSorted));
 
+        int[] insertionSorted = st.insertionSort(arr);
+        System.out.println("Insertions Sort: " + Arrays.toString(insertionSorted));
 
     }
 }
